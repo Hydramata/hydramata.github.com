@@ -52,8 +52,8 @@ We are planning to mirror SWARM tasks on the [DuraSpace JIRA][21] and can do the
 [13]: https://github.com/jeremyf/hydramata-work#top-level-features
 [14]: https://github.com/jeremyf/hydramata-work#low-level-tasks
 [15]: https://github.com/jeremyf/hydramata-work#prototypical-story
-[16]: /images/hydramata-refactor-tasks-t.jpg
-[17]: /images/hydramata-refactor-tasks.png
+[16]: /images/hydramata-refactor-tasks-sprint-1-t.jpg
+[17]: /images/hydramata-refactor-tasks-sprint-1.png
 [18]: https://jira.library.nd.edu/
 [19]: https://jira.library.nd.edu/secure/RapidBoard.jspa?rapidView=55
 [20]: https://jira.library.nd.edu/secure/RapidBoard.jspa?rapidView=55&view=planning&quickFilter=139
