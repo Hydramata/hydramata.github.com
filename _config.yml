@@ -1,0 +1,7 @@
+highlighter: true
+
+exclude:
+  - .gitingore
+  - README.md
+  - Gemfile
+  - Gemfile.lock

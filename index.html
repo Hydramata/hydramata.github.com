@@ -1,35 +1,14 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Hydramata by Hydramata</title>
+---
+layout: boilerplate
+title: Hydramata
+---
+<p>We are only <a href="https://wiki.duraspace.org/display/hydra/Hydramata">just beginning</a>.</p>
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-  </head>
-  <body>
-    <div class="wrapper">
-      <header>
-        <h1>Hydramata</h1>
-        <p>Hydramatons assemble!</p>
-
-
-        <p class="view"><a href="https://github.com/Hydramata">View My GitHub Profile</a></p>
-
-      </header>
-      <section>
-        <p>We are only <a href="https://wiki.duraspace.org/display/hydra/Hydramata">just beginning</a>.</p>
-      </section>
-      <footer>
-        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
-      </footer>
-    </div>
-    <script src="javascripts/scale.fix.js"></script>
-    
-  </body>
-</html>
+<ul class="listing">
+  {% for post in site.posts %}
+  <li itemscope itemtype="http://schema.org/Article">
+    <a href="{{ post.url }}"><span itemprop="name">{{post.title }}</span></a>
+    <time itemprop="dateCreated" datetime="{{ post.date | date:"%Y-%m-%d %H:%M" }}" >{{ post.date | date:"%B %e, %Y" }}</time>
+  </li>
+  {% endfor %}
+</ul>

@@ -159,7 +159,7 @@ header ul a strong {
   color:#222;
 }
 
-section {
+main {
   width:500px;
   float:right;
   padding-bottom:50px;
@@ -190,7 +190,7 @@ footer {
     margin:0;
   }
   
-  header, section, footer {
+  header, main, footer {
     float:none;
     position:static;
     width:auto;
