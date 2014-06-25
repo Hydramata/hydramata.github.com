@@ -35,6 +35,13 @@ h3, h4, h5, h6 {
 a {
   color:#39c;
   font-weight:400;
+  text-decoration:underline;
+  -webkit-text-decoration-style:dotted;
+  -moz-text-decoration-style:dotted;
+  text-decoration-style:dotted;
+}
+
+a:hover {
   text-decoration:none;
 }
 
