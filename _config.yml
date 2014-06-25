@@ -1,5 +1,9 @@
 highlighter: true
 
+description: The Hydramata Project development blog
+url: http://hydramata.github.io
+name: Hydramata Project
+
 exclude:
   - .gitingore
   - README.md
