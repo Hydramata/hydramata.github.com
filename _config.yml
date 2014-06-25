@@ -4,6 +4,8 @@ description: The Hydramata Project development blog
 url: http://hydramata.github.io
 name: Hydramata Project
 
+permalink: /:categories/:title/
+
 exclude:
   - .gitingore
   - README.md

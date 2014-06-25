@@ -1,8 +1,9 @@
 ---
 layout: boilerplate
-title: Hydramata Update
+category: status
+title: Hydramata Sprint 1 Update
 ---
-# Hydramata Update
+# Hydramata Sprint 1 Update
 
 ## CurateND
 
