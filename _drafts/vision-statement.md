@@ -10,12 +10,12 @@ The combination of the framework and the reference implementation of each module
 
 ## What are the functional requirements for a “base” IR?
 
-The initial development of Hydramata will deliver a Minimal Viable Product (MVP). It is not an exhaustive list of requirements but rather the kinds of things we need the system to do and in what way (configurable?) in preparation for re-architecture planning. The below number represents epics or a number of epics per heading.
+The initial goal of Hydramata is to deliver a Minimal Viable Product (MVP) for a self-deposit based digital repository. Its development will not be guided by an exhaustive list of requirements for a digital repository ecosystem. Instead, Hydramata will focus on providing a flexible and capable foundation that provides the following features:
 
 ### 1. Users can log in using credentials provided by the implementing institution
 
 - Primary users include: Faculty, delegates, students, and library  support staff
-- The Hydramata authentication system should be able to integrate with common systems like: LDAP, CAS, or Shibboleth.
+- The Hydramata authentication system should be able to integrate with common providers such as: LDAP, CAS, or Shibboleth.
 - Hydramata should allow the authentication of collaborators external to the implementing institution either through federation, e.g. Shibboleth, or by supporting distributed authorization providers e.g. ORCID.
 
 ### 2. The accuracy, persistence, security, and recoverability of what users upload will be maintained throughout the system.
@@ -23,15 +23,15 @@ The initial development of Hydramata will deliver a Minimal Viable Product (MVP)
 Users and content administrators should be confident that:
 
 - The Hydramata application will not change metadata or digital objects inadvertently or unintentionally.
-- Hydramata can accommodate an institution’s security precautions to prevent malicious tampering of content e.g. using an anti-virus scanner to prevent the upload of malware.
+- Hydramata can accommodate an institution’s security policies and prevent malicious tampering of content e.g. using an anti-virus scanner to prevent the upload of malware.
 - Hydramata relies on the preservation methods and actions that Fedora provides including checksums of datastreams.
 - Access rights, auditability, and compliance will be maintained transparently.
 
-### 3. I want users to upload _stuff_- either via UI or via a batch process
+### 3. Users can upload content via a web interface or batch process.
 
 - Faculty, students are the primary content providers/authors
 - Library archival collections are not the target audience for a self-deposit system
-- Typical work types would include things like, for which we will have reference implementations of (that can be customized):
+- There will be reference implementations of common work types such as:
 	- Image
 	- Document
 	- ETD
@@ -39,20 +39,23 @@ Users and content administrators should be confident that:
 	- Article
 	- Video/Audio
 	- Software
-- Some works may reference external content instead of or in addition to containing files.
 - It should be easy for an implementer to be able to add work types.
-- upload a variety of files
-	- wide variety of files should be supported for works mentioned above to be downloaded by end user
-	- no specialized viewers are included; for example you can download files, Hydramata itself will not include the ability to stream media but does not prevent its implementation.
-	- upload from desktop, cloud services
-	- upload large files wouldn’t happen via browser but could be accommodated by a sys admin (well over 1 GB)
-	- can be possible to upload more than one file to the same work at once
-- upload a batch of files where an authorized user (such as a sys admin, repo manager) submits a package to create many works at once outside of the UI.
+- Works can reference external content.
+- Works can contain one or more files.
+	- Files of any type can be uploaded to Hydramata, associated with a work, and be downloaded by an end user.
+	- Hydramata will not augment the ability of a web browser to display files; files can downloaded or rendered in the browser when supported. Although Hydramata will not include the ability to stream media or include interactive file viewers it will not prevent their implementation.
+	- Files can be uploaded from a User’s computer but will be limited to what can be accommodated by the native browser upload functionality (this has a practical limitation of around .5 Gb)
+	- Uploading large files (well over 1 GB) will not be possible could for an end user but could be accommodated by a sys admin.
+	- It will be possible to upload more than one file at a time to a work
+	- Files in cloud services will be able to be transferred to Hydramata.
+- An authorized user (such as a sys admin or repo manager) can batch upload files by submitting a package that will create many works at a time. This will take place outside of the Hydramata web interface.
 
-### 4. I need varied terms of use and license agreements for the stuff I’m uploading
+### 4. There will be appropriate terms of use and license agreements for content added to Hydramata.
 
-- Standard set of options for choosing a license to apply to a work and the files within the work. That license chosen is persisted in the repository for auditing purposes.
-- I want clear understanding of the terms of use for the repository.
+- Hydramata will provide a default set of options for licenses that apply to a work and the files within the work. The chosen license will be persisted in the repository for auditing purposes.
+- The list of applicable content licenses may differ based on work type.
+- The deposit agreement may differ based on administrative context.
+- The terms of use for the repository will be stated clearly.
 
 ### 5. I want them to describe stuff
 
