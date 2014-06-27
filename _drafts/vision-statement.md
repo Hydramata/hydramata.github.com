@@ -10,7 +10,7 @@ The combination of the framework and the reference implementation of each module
 
 ## What are the functional requirements for a “base” IR?
 
-The initial goal of Hydramata is to deliver a Minimal Viable Product (MVP) for a self-deposit based digital repository. Its development will not be guided by an exhaustive list of requirements for a digital repository ecosystem. Instead, Hydramata will focus on providing a flexible and capable foundation that provides the following features:
+The initial goal of Hydramata is to deliver a powerful, flexible  means of storing and retrieving heterogenous data and metadata from a preservation-enabled storage system. On top of this core Hydramata will implement the features necessary to provide a minimal viable product for a self-deposit digital repository. The development of the self-deposit features will not be guided by an exhaustive list of requirements for a digital repository ecosystem. Instead, Hydramata will focus on providing the following features:
 
 ### 1. Users can log in using credentials provided by the implementing institution
 
@@ -57,12 +57,12 @@ Users and content administrators should be confident that:
 - The deposit agreement may differ based on administrative context.
 - The terms of use for the repository will be stated clearly.
 
-### 5. I want them to describe stuff
+### 5. Hydramata will allow content to be described in varying degrees of detail.
 
-- There is a default set of fields available for several work types that are included in the reference implementation. Any edits to this work type are done by institution.
-- For the reference implementation work types, RDF is optimized to include controlled vocabularies and to support vocabularies expressed as Linked Open Data
-- The type of work dictates the available metadata fields
-- Any additional work types are able to be added without “too much pain”
+- The work type dictates the available form fields for composing or editing metadata.
+- There will be reference implementations of several work types. These reference implementations can be customized or extended by an implementer.
+- Creating additional work types will be relatively easy.
+- If a work is enriched with metadata beyond what fields are defined in the work type (e.g. through a batch process) the extra metadata will not be discarded.
 
 ### 6. I want to organize stuff, for example
 
@@ -120,3 +120,5 @@ Users and content administrators should be confident that:
 ### 14. I want Hydramata to be able to integrate an external DOI so I can assign an DOI to works.
 
 - local institutions would be responsible for integrating with external DOI systems if they want to mint DOI’s from within the app similar to [Hydra Remote Identifier](https://github.com/projecthydra-labs/hydra-remote_identifier)
+
+### 15. Works, Files, and Collections should be able to belong to Administrative Contexts.
