@@ -57,17 +57,17 @@ Users and content administrators should be confident that:
 - The deposit agreement may differ based on administrative context.
 - The terms of use for the repository will be stated clearly.
 
-### 5. Hydramata will allow content to be described in varying degrees of detail.
+### 5. Content in Hydramata can be described in varying degrees of detail.
 
 - The work type dictates the available form fields for composing or editing metadata.
 - There will be reference implementations of several work types. These reference implementations can be customized or extended by an implementer.
 - Creating additional work types will be relatively easy.
 - If a work is enriched with metadata beyond what fields are defined in the work type (e.g. through a batch process) the extra metadata will not be discarded.
 
-### 6. I want to organize stuff, for example
+### 6. Content in Hydramata can be organized in a variety of ways.
 
-- create groupings of works in the repository (includes their own stuff and users stuff, assuming they can discover it)
-- relate works to works
+- Works can be grouped together arbitrarily. Groups of works can contain works from multiple owners.
+- Works will be able to be related to each other. This can be a varying levels of specificity e.g. simply ”related“ or using a Group 1 FRBR relationship: exemplarOf, embodymentOf, realizationOf.
 
 ### 7. I want them to be able to share stuff (or restrict from) with the right people such as
 
