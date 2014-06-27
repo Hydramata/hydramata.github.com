@@ -120,8 +120,9 @@ Users and content administrators should be confident that:
 - can be used to link to external sources of user information
 - local institutions would be responsible for integrating the [ORCID gem](https://github.com/projecthydra-labs/orcid) if they are interested in minting ORCIDs from within the app
 
-### 14. I want Hydramata to be able to integrate an external DOI so I can assign an DOI to works.
+### 14. Hydramata will be able to integrate with external identifier providers so that works can be uniquely identified.
 
-- local institutions would be responsible for integrating with external DOI systems if they want to mint DOI’s from within the app similar to [Hydra Remote Identifier](https://github.com/projecthydra-labs/hydra-remote_identifier)
+- An implementing institution can integrate with services that provide [DOI](http://www.doi.org/), [HDL](http://www.handle.net/), or other identifier schemes.
+- [Hydra Remote Identifier](https://github.com/projecthydra-labs/hydra-remote_identifier) is a reference implementation for integrating with a DOI provider.
 
-### 15. Works, Files, and Collections should be able to belong to Administrative Contexts.
+### 15. Works, Files, and Collections can belong to Administrative Contexts.
