@@ -69,19 +69,22 @@ Users and content administrators should be confident that:
 - Works can be grouped together arbitrarily. Groups of works can contain works from multiple owners.
 - Works will be able to be related to each other. This can be a varying levels of specificity e.g. simply ”related“ or using a Group 1 FRBR relationship: exemplarOf, embodymentOf, realizationOf.
 
-### 7. I want them to be able to share stuff (or restrict from) with the right people such as
+### 7. Content in Hydramata can be shared with domains, groups, or individuals for varying lengths of time.
 
-- the world
-- to a specific person
-- to a group
-	- that I created
-	- that exist in the institution (Hydramata should have the ability to connect to systems so hydramata users can restrict access to specific groups that exist in external system. The two systems we will definitely need to connect to are LDAP and SHIBBOLETH)
-- my institution
-- an external collaborator
-- for a limited amount of time
-	- embargo (can’t see until)
-	- lease (see until a certain date)
-	- one time use URL
+- Domains:
+	- The world
+	- The implementing institution
+- Groups:
+	- That are created by an individual
+	- That are functional units in an implementing institution. Hydramata will need to integrate with LDAP or Shibboleth in order for users to restrict access to groups that exist in those external systems.
+- Individuals:
+	- A specific person at an implementing institution
+	- An external collaborator with a known ID e.g. ORCID.
+- Time bounds:
+	- Available immediately
+	- Embargo: available until a specified date
+	- Lease: available until a specified date
+	- Single use URL: available only once at a specific URL
 
 ### 8. I want them to be able to discover stuff - if they should
 
