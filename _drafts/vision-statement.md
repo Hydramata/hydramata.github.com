@@ -1,3 +1,5 @@
+UNRATIFIED DRAFT
+
 # What is Hydramata?
 
 Hydramata is a framework for developing institutional repositories. The reference implementation of this framework will provide a minimally functional institutional repository system by supporting the upload, preservation, and discovery of an institution’s faculty and student scholarly output of enduring value.
@@ -29,17 +31,18 @@ Users and content administrators should be confident that:
 
 ### 3. Users can upload content via a web interface or batch process.
 
-- Faculty, students are the primary content providers/authors
+- Faculty and students are the primary content providers/authors
 - Library archival collections are not the target audience for a self-deposit system
 - There will be reference implementations of common work types such as:
-	- Image
+	- Article
+	- Audio
+	- Dataset
 	- Document
 	- ETD
-	- Dataset/Database
-	- Article
-	- Video/Audio
+	- Image
 	- Software
-- It should be easy for an implementer to be able to add work types.
+	- Video
+- It should be easy for an implementer to add work types.
 - Works can reference external content.
 - Works can contain one or more files.
 	- Files of any type can be uploaded to Hydramata, associated with a work, and be downloaded by an end user.
@@ -47,7 +50,7 @@ Users and content administrators should be confident that:
 	- Uploading large files (well over 1 GB) will not be possible via the web interface. Ingesting large files can be accommodated by a sys admin.
 	- A work can have more than one file uploaded to it at once.
 	- Files in cloud services will be able to be transferred to Hydramata.
-- An authorized user (such as a sys admin or repo manager) can batch upload files by submitting a package that will create many works at a time. This will take place outside of the Hydramata web interface.
+- An authorized user (such as a sys admin or repository manager) can batch upload files by submitting a package that will create many works at a time. This will take place outside of the Hydramata web interface.
 
 ### 4. There will be appropriate terms of use and license agreements for content added to Hydramata.
 
@@ -60,13 +63,12 @@ Users and content administrators should be confident that:
 
 - The work type dictates the available form fields for composing or editing metadata.
 - There will be reference implementations of several work types. These reference implementations can be customized or extended by an implementer.
-- Creating additional work types will be relatively easy.
 - If a work is enriched with metadata beyond what fields are defined in the work type (e.g. through a batch process) the extra metadata will not be discarded.
 
 ### 6. Content in Hydramata can be organized in a variety of ways.
 
 - Works can be grouped together arbitrarily. Groups of works can contain works from multiple owners.
-- Works will be able to be related to each other. This can be a varying levels of specificity e.g. simply ”related“ or using a Group 1 FRBR relationship: exemplarOf, embodymentOf, realizationOf.
+- Works will be able to be related to each other. This can be a varying levels of specificity e.g. simply “related” or using a Group 1 FRBR relationship: exemplarOf, embodymentOf, realizationOf.
 
 ### 7. Content in Hydramata can be shared with domains, groups, or individuals for varying lengths of time.
 
@@ -75,7 +77,7 @@ Users and content administrators should be confident that:
 	- The implementing institution
 - Groups:
 	- That are created by an individual
-	- That are functional units in an implementing institution. Hydramata will need to integrate with LDAP or Shibboleth in order for users to restrict access to groups that exist in those external systems.
+	- That are functional units in an implementing institution. Hydramata will need to integrate with LDAP and/or Shibboleth in order for users to restrict access to groups that exist in those external systems.
 - Individuals:
 	- A specific person at an implementing institution
 	- An external collaborator with a known ID e.g. ORCID.
@@ -99,23 +101,26 @@ Users and content administrators should be confident that:
 - Hydramata will not include the ability to stream media or include interactive file viewers but it will not prevent their implementation.
 - The ability to view a Work or download a File will be determined by their respective access controls.
 
-### 10. Users can collaborate on stuff at the item level
+### 10. Hydramata will facilitate collaborative editing of works.
 
-- for example, grant edit privileges to other individuals and groups
+- A depositor may grant edit privileges to other individuals and groups of their choosing at any time.
 
-### 11. I want them to know metrics about their deposits
+### 11. Hydramata will provide basic usage statistics.
 
-- users can see basic metrics for content downloads
+- Views and downloads of content will be logged for reporting purposes.
+- A usage summary will be made available to end users e.g. download count for a file.
 
-### 12. I want a variety of roles for people to interact with the IR
+### 12. Hydramata will use roles to determine what a user is able to do.
 
-- For example, a Repository Manager role should be discover and edit all content in any status. ETD administrator is another example where ETDs would be the only content they could administer
-- a few common roles would be included in base.
-- there is a way to add people to that role dynamically.
-- modifying the role capabilities would need to be possible but does not assume an interactive UI to do.
-- other roles needed are up to the institution to create.
-- there is no interactive UI to easily create roles
-- Hydramata enforces roles and permissions so that only authorized users can change what has been uploaded.
+- Users can only discover, view, create, or update the content with which they are authorized. Roles are the primary method of granting authorization to a user.
+- There are use cases for granting privileges to all the content in Hydramata as well as subsets of the content.
+	- A Repository Manager role should be able discover and edit all content in any status.
+	- An ETD Administrator role would grant the ability to discover and edit all content of the ETD work type.
+- There will be a reference implementation of a Repository Manager.
+- Additional roles may be created by implementing institutions.
+- There will be no interactive UI for creating roles.
+- Individuals must be able to be given roles dynamically.
+- There must be a way for an implementing institution to modify the abilities granted to a role but it is not necessary to have an interactive UI to do.
 
 ### 13. Names of people within Hydramata can include an external identifier so that individuals can be uniquely identified.
 
@@ -130,3 +135,9 @@ Users and content administrators should be confident that:
 - [Hydra Remote Identifier](https://github.com/projecthydra-labs/hydra-remote_identifier) is a reference implementation for integrating with a DOI provider.
 
 ### 15. Works, Files, and Collections can belong to Administrative Contexts.
+
+- An administrative context is a way of organizing works, files, and collections in Hydramata.
+- Administrative contexts may have a subset or a superset of work types available to the general holdings.
+- Roles can be created that are specific to an administrative context.
+- Administrative contexts will be represented as facet values in the discovery interface.
+	- Administrative contexts are expected to map to organizational structures in the implementing institution. As such they may be nested in the facet listing. This nesting does not imply permission inheritance from parent administrative contexts to child ones.
