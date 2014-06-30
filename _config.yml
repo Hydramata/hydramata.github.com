@@ -1,4 +1,5 @@
 highlighter: true
+markdown: kramdown
 
 description: The Hydramata Project development blog
 url: http://hydramata.github.io
