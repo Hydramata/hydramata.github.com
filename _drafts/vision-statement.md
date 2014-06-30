@@ -10,11 +10,11 @@ The combination of the framework and the reference implementation of each module
 
 ## What are the functional requirements for a “base” IR?
 
-The initial goal of Hydramata is to deliver a powerful, flexible  means of storing and retrieving heterogenous data and metadata from a preservation-enabled storage system. On top of this core Hydramata will implement the features necessary to provide a minimal viable product for a self-deposit digital repository. The development of the self-deposit features will not be guided by an exhaustive list of requirements for a digital repository ecosystem. Instead, Hydramata will focus on providing the following features:
+The initial goal of Hydramata is to deliver a powerful, flexible means of storing and retrieving heterogenous data and metadata from a preservation-enabled storage system. On top of this core Hydramata will implement the minimum features necessary to provide a self-deposit enabled digital repository. The development of the self-deposit features will not be guided by an exhaustive list of requirements for a digital repository ecosystem. Instead, Hydramata will focus on providing the following features:
 
 ### 1. Users can log in using credentials provided by the implementing institution
 
-- Primary users include: Faculty, delegates, students, and library  support staff
+- Primary users include: Faculty, delegates, students, and library support staff
 - The Hydramata authentication system should be able to integrate with common providers such as: LDAP, CAS, or Shibboleth.
 - Hydramata should allow the authentication of collaborators external to the implementing institution either through federation, e.g. Shibboleth, or by supporting distributed authorization providers e.g. ORCID.
 
@@ -43,10 +43,9 @@ Users and content administrators should be confident that:
 - Works can reference external content.
 - Works can contain one or more files.
 	- Files of any type can be uploaded to Hydramata, associated with a work, and be downloaded by an end user.
-	- Hydramata will not augment the ability of a web browser to display files; files can downloaded or rendered in the browser when supported. Although Hydramata will not include the ability to stream media or include interactive file viewers it will not prevent their implementation.
 	- Files can be uploaded from a User’s computer but will be limited to what can be accommodated by the native browser upload functionality (this has a practical limitation of around .5 Gb)
-	- Uploading large files (well over 1 GB) will not be possible could for an end user but could be accommodated by a sys admin.
-	- It will be possible to upload more than one file at a time to a work
+	- Uploading large files (well over 1 GB) will not be possible via the web interface. Ingesting large files can be accommodated by a sys admin.
+	- A work can have more than one file uploaded to it at once.
 	- Files in cloud services will be able to be transferred to Hydramata.
 - An authorized user (such as a sys admin or repo manager) can batch upload files by submitting a package that will create many works at a time. This will take place outside of the Hydramata web interface.
 
@@ -86,15 +85,19 @@ Users and content administrators should be confident that:
 	- Lease: available until a specified date
 	- Single use URL: available only once at a specific URL
 
-### 8. I want them to be able to discover stuff - if they should
+### 8. Hydramata will provide a search and discovery interface that enforces access controls.
 
-- searching and browsing all content in the repository one should discover
-- the ability to set different access levels for metadata vs content/files.
+- Content can be excluded from the search result listings based on the privileges of the User conducting the search.
+- Access controls can be set independently at the Work level and the File level.
 
-### 9. I want them to be able to view stuff
+### 9. Hydramata will display content.
 
-- can view works and download files only if they have the right to
-- no specialized viewers should be included in base, you can download files, but we won’t stream media for example
+- Each Work will have a detail page enumerating its contents.
+- Files can be downloaded directly from Hydramata.
+- Files will be rendered in the browser when supported.
+- Hydramata will not augment the ability of a web browser to display files.
+- Hydramata will not include the ability to stream media or include interactive file viewers but it will not prevent their implementation.
+- The ability to view a Work or download a File will be determined by their respective access controls.
 
 ### 10. Users can collaborate on stuff at the item level
 
@@ -114,15 +117,16 @@ Users and content administrators should be confident that:
 - there is no interactive UI to easily create roles
 - Hydramata enforces roles and permissions so that only authorized users can change what has been uploaded.
 
-### 13. Contributors names should be able to link to standard identifiers e.g. ORCID
+### 13. Names of people within Hydramata can include an external identifier so that individuals can be uniquely identified.
 
-- standard identifiers (ORCID) can be used to clearly identify authors, creators and contributors
-- can be used to link to external sources of user information
-- local institutions would be responsible for integrating the [ORCID gem](https://github.com/projecthydra-labs/orcid) if they are interested in minting ORCIDs from within the app
+- An implementing institution can employ [ORCID](http://orcid.org/), [ResearcherID](http://www.researcherid.com/), [ISNI](http://www.isni.org/), or other identifier schemes to clearly identify authors, creators and contributors.
+- [ORCID](http://orcid.org/) will be the reference implementation.
+- The [ORCID gem](https://github.com/projecthydra-labs/orcid) is a reference implementation for creating and authorizing ORCID iDs for their patrons.
 
 ### 14. Hydramata will be able to integrate with external identifier providers so that works can be uniquely identified.
 
-- An implementing institution can integrate with services that provide [DOI](http://www.doi.org/), [HDL](http://www.handle.net/), or other identifier schemes.
+- An implementing institution can employ [DOI](http://www.doi.org/), [HDL](http://www.handle.net/), or other identifier schemes to clearly identify content.
+- [DOI](http://www.doi.org/) will be the reference implementation.
 - [Hydra Remote Identifier](https://github.com/projecthydra-labs/hydra-remote_identifier) is a reference implementation for integrating with a DOI provider.
 
 ### 15. Works, Files, and Collections can belong to Administrative Contexts.
