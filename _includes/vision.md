@@ -91,7 +91,7 @@ The initial goal of Hydramata is to deliver a powerful, flexible means of storin
 	1. The ability to view a Work or download a File will be determined by their respective access controls.
 
 10. Hydramata will facilitate collaborative editing of works.
-	1. A depositor may grant edit privileges to other individuals and groups of their choosing at any time.
+	1. A depositor may grant editing privileges to other individuals and groups of their choosing at any time.
 
 11. Hydramata will provide basic usage statistics.
 	1. Views and downloads of content will be logged for reporting purposes.

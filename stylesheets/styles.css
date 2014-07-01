@@ -190,14 +190,14 @@ footer {
   bottom:50px;
 }
 
-.outline-numbering ol {list-style-type:none;}
+.outline-numbering ol {list-style-type:none; padding-left:1.5em;}
 .outline-numbering ol > li {position:relative; font-weight:bold;}
 
 .outline-numbering ol { counter-reset:item; }
 .outline-numbering ol > li { counter-increment:item; }
 .outline-numbering ol > li:before {content: counter(item) "."; }
 
-.outline-numbering ol > li > ol { counter-reset:subitem; }
+.outline-numbering ol > li > ol { counter-reset:subitem; padding-left:3em;}
 .outline-numbering ol > li > ol > li { counter-increment:subitem; font-weight:normal;}
 .outline-numbering ol > li > ol > li:before { content: counter(item) "." counter(subitem); }
 
