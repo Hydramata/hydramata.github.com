@@ -98,7 +98,7 @@ The initial goal of Hydramata is to deliver a powerful, flexible means of storin
 	1. There are use cases for granting privileges to all the content in Hydramata as well as subsets of the content.
 		1. A Repository Manager role is able discover and edit all content in any status.
 		1. An ETD Administrator role grants the ability to discover and edit all content of the ETD work type.
-	1. A their is a reference implementation of a Repository Manager.
+	1. There is a reference implementation of a Repository Manager.
 	1. Additional roles may be created by implementing institutions.
 	1. Individuals can be given roles dynamically.
 	1. There is no interactive UI for creating roles.
