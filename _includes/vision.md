@@ -41,7 +41,7 @@ The initial goal of Hydramata is to deliver a powerful, flexible means of storin
 	1. Works can reference external content.
 	1. Works can contain one or more files.
 		1. Files of any type can be uploaded to Hydramata, associated with a work, and be downloaded by an end user.
-		1. Files can be uploaded from a User’s computer but will be limited to what can be accommodated by the native browser upload functionality (this has a practical limitation of around .5 Gb)
+		1. Files can be uploaded from a user’s computer but will be limited to what can be accommodated by the native browser upload functionality (this has a practical limitation of around .5 GB)
 		1. Uploading large files (well over 1 GB) will not be possible via the web interface. Ingesting large files can be accommodated by a sys admin.
 		1. A work can have more than one file uploaded to it at once.
 		1. Files in cloud services will be able to be transferred to Hydramata.
@@ -79,7 +79,7 @@ The initial goal of Hydramata is to deliver a powerful, flexible means of storin
 		1. Single use URL: available only once at a specific URL
 
 8. Hydramata will provide a search and discovery interface that enforces access controls.
-	1. Content can be excluded from the search result listings based on the privileges of the User conducting the search.
+	1. Content can be excluded from the search result listings based on the privileges of the user conducting the search.
 	1. Access controls can be set independently at the Work level and the File level.
 
 9. Hydramata will display content.
