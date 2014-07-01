@@ -105,8 +105,8 @@ The initial goal of Hydramata is to deliver a powerful, flexible means of storin
 	1. There must be a way for an implementing institution to modify the abilities granted to a role. There is no interactive UI for role modification.
 
 12. Hydramata provides a search and discovery interface that enforces access controls.
-  1. Content can be excluded from the search result listings based on the privileges of the user conducting the search.
-  1. Access controls can be set independently at the work level and the file level.
+	1. Content can be excluded from the search result listings based on the privileges of the user conducting the search.
+	1. Access controls can be set independently at the work level and the file level.
 
 13. Hydramata integrates with external identifier providers so that people can be uniquely identified.
 	1. An implementing institution can employ [ORCID](http://orcid.org/), [ResearcherID](http://www.researcherid.com/), [ISNI](http://www.isni.org/), or other identifier schemes to clearly identify authors, creators and contributors.
