@@ -16,7 +16,7 @@ The initial goal of Hydramata is to deliver a powerful, flexible means of storin
 
 1.  Users can log in using credentials provided by the implementing institution
 	1. Primary users include: Faculty, delegates, students, and library support staff
-	1. The Hydramata authentication system should be able to integrate with common providers such as: LDAP, CAS, or Shibboleth.
+	1. The Hydramata authentication system integrates with common providers such as: LDAP, CAS, or Shibboleth.
 	1. Hydramata should allow the authentication of collaborators external to the implementing institution either through federation, e.g. Shibboleth, or by supporting distributed authorization providers e.g. ORCID.
 
 2. The accuracy, persistence, security, and recoverability of what users upload is maintained throughout the system.
@@ -37,15 +37,15 @@ The initial goal of Hydramata is to deliver a powerful, flexible means of storin
 		1. Image
 		1. Software
 		1. Video
-	1. It should be easy for an implementer to add work types.
+	1. It is easy for an implementer to add work types.
 	1. Works can reference external content.
 	1. Works can contain one or more files.
 		1. Files of any type can be uploaded to Hydramata, associated with a work, and be downloaded by an end user.
 		1. Files uploaded from a user’s computer are limited to the size accommodated by the native browser upload functionality (this has a practical limitation of around .5 GB)
-		1. Uploading large files (well over 1 GB) is not be possible via the web interface. Ingesting large files can be accommodated by a sys admin.
+		1. Uploading large files (well over 1 GB) is not be possible via the web interface. Ingesting large files can be accommodated by a system admininstrator.
 		1. A work can have more than one file uploaded to it at once.
-		1. Files in cloud services can be able to be transferred to Hydramata.
-	1. An authorized user (such as a sys admin or repository manager) can batch upload files by submitting a package that creates many works at a time. This takes place outside of the Hydramata web interface.
+		1. Files in cloud services can be transferred to Hydramata.
+	1. An authorized user (such as a system admininstrator or repository manager) can batch upload files by submitting a package that creates many works at a time. This takes place outside of the Hydramata web interface.
 
 4. Appropriate terms of use and license agreements for content are present.
 	1. Hydramata provides a default set of options for licenses that apply to a work and the files within the work. The chosen license is persisted in the repository for auditing purposes.
@@ -78,11 +78,7 @@ The initial goal of Hydramata is to deliver a powerful, flexible means of storin
 		1. Lease: available until a specified date
 		1. Single use URL: available only once at a specific URL
 
-8. Hydramata provides a search and discovery interface that enforces access controls.
-	1. Content can be excluded from the search result listings based on the privileges of the user conducting the search.
-	1. Access controls can be set independently at the work level and the file level.
-
-9. Content in Hydramata is viewable by an end user.
+8. Content in Hydramata is viewable by an end user.
 	1. Each work has a detail page enumerating its contents.
 	1. Files can be downloaded directly from Hydramata.
 	1. Files are rendered in the browser when supported.
@@ -90,23 +86,27 @@ The initial goal of Hydramata is to deliver a powerful, flexible means of storin
 	1. Hydramata does not include the ability to stream media. Integrating with a video or audio dissemination system can be done at the discretion of an implementing institution.
 	1. The ability of a user to view a work or download a file is determined by their respective access controls.
 
-10. Works can be edited collaboratively.
+9. Works can be edited collaboratively.
 	1. A depositor may grant editing privileges to other individuals and groups of their choosing at any time.
 
-11. Basic usage statistics are provided.
+10. Basic usage statistics are provided.
 	1. Views and downloads of content are logged for reporting purposes.
 	1. A usage summary is available to end users e.g. download count for a file.
 
-12. Roles determine what a user is able to do.
+11. Roles determine what a user is able to do.
 	1. Users can only discover, view, create, or update the content with which they are authorized. Roles are the primary method of granting authorization to a user.
 	1. There are use cases for granting privileges to all the content in Hydramata as well as subsets of the content.
-		1. A Repository Manager role should be able discover and edit all content in any status.
-		1. An ETD Administrator role would grant the ability to discover and edit all content of the ETD work type.
+		1. A Repository Manager role is able discover and edit all content in any status.
+		1. An ETD Administrator role grants the ability to discover and edit all content of the ETD work type.
 	1. A their is a reference implementation of a Repository Manager.
 	1. Additional roles may be created by implementing institutions.
-	1. Individuals must be able to be given roles dynamically.
+	1. Individuals can be given roles dynamically.
 	1. There is no interactive UI for creating roles.
 	1. There must be a way for an implementing institution to modify the abilities granted to a role. There is no interactive UI for role modification.
+
+12. Hydramata provides a search and discovery interface that enforces access controls.
+  1. Content can be excluded from the search result listings based on the privileges of the user conducting the search.
+  1. Access controls can be set independently at the work level and the file level.
 
 13. Hydramata integrates with external identifier providers so that people can be uniquely identified.
 	1. An implementing institution can employ [ORCID](http://orcid.org/), [ResearcherID](http://www.researcherid.com/), [ISNI](http://www.isni.org/), or other identifier schemes to clearly identify authors, creators and contributors.
