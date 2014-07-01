@@ -60,7 +60,7 @@ The initial goal of Hydramata is to deliver a powerful, flexible means of storin
 
 6. Content in Hydramata can be organized in a variety of ways.
 	1. Works can be grouped together arbitrarily. Groups of works can contain works from multiple owners.
-	1. Works can be related to each other. This can be a varying levels of specificity e.g. simply “related” or using a Group 1 FRBR relationship: exemplarOf, embodymentOf, realizationOf.
+	1. Works can be related to each other. This can be at varying levels of specificity e.g. simply “related” or using a Group 1 FRBR relationship: exemplarOf, embodymentOf, realizationOf.
 
 7. Content in Hydramata can be shared with domains, groups, or individuals for varying lengths of time.
 	1. Domains:
@@ -74,7 +74,7 @@ The initial goal of Hydramata is to deliver a powerful, flexible means of storin
 		1. An external collaborator with a known ID e.g. ORCID.
 	1. Time bounds:
 		1. Available immediately
-		1. Embargo: available until a specified date
+		1. Embargo: available after a specified date
 		1. Lease: available until a specified date
 		1. Single use URL: available only once at a specific URL
 
@@ -102,7 +102,7 @@ The initial goal of Hydramata is to deliver a powerful, flexible means of storin
 	1. Additional roles may be created by implementing institutions.
 	1. Individuals can be given roles dynamically.
 	1. There is no interactive UI for creating roles.
-	1. There must be a way for an implementing institution to modify the abilities granted to a role. There is no interactive UI for role modification.
+	1. An implementing institution can modify the abilities granted to a role. There is no interactive UI for role modification.
 
 12. Hydramata provides a search and discovery interface that enforces access controls.
 	1. Content can be excluded from the search result listings based on the privileges of the user conducting the search.
