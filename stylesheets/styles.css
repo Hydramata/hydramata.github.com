@@ -226,4 +226,8 @@ footer {
     font-size:12pt;
     color:#444;
   }
+
+  header, footer {
+    display:none;
+  }
 }
