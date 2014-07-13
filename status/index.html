@@ -1,0 +1,15 @@
+---
+layout:   boilerplate
+category: status
+title:    Status &mdash; Hydramata
+---
+<h1>Status</h1>
+
+<ul class="listing">
+  {% for post in site.categories.status %}
+    <li itemscope itemtype="http://schema.org/Article">
+      <a href="{{ post.url }}"><span itemprop="name">{{post.title }}</span></a>
+      <time title="{{ post.date | date:"%B %e, %Y" }}" itemprop="dateCreated" datetime="{{ post.date | date:"%Y-%m-%d %H:%M" }}" >{{ post.date | date:"%Y-%m-%d" }}</time>
+    </li>
+  {% endfor %}
+</ul>
