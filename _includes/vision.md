@@ -72,8 +72,10 @@ Instead, Hydramata will focus on providing the following features:
 	1. If a work is enriched with metadata beyond what fields are defined in the work type (e.g. through a batch process) the extra metadata is not be discarded.
 
 6. Content in Hydramata can be organized in a variety of ways.
-	1. Works can be grouped together arbitrarily.
-	Groups of works can contain works from multiple owners.
+	1. Works and files can be grouped into sets.
+		1. Arbitry sets can be created by end users.
+		1. Sets can contain works from multiple owners.
+		1. User sets will not be prominatnly featured in the search results.
 	1. Works can be related to each other.
 	This can be at varying levels of specificity e.g. simply “related” or using a Group 1 FRBR relationship: exemplarOf, embodymentOf, realizationOf.
 
@@ -138,8 +140,8 @@ Instead, Hydramata will focus on providing the following features:
 	1. There is a reference implementation of [DOI](http://www.doi.org/).
 	1. [Hydra Remote Identifier](https://github.com/projecthydra-labs/hydra-remote_identifier) is a reference implementation for integrating with a DOI provider.
 
-15. Works, Files, and Collections can belong to Administrative Contexts.
-	1. An administrative context is a way of organizing works, files, and collections in Hydramata.
+15. Works, Files, and Sets can belong to Administrative Contexts.
+	1. An administrative context is a way of organizing works, files, and sets in Hydramata.
 	1. Administrative contexts may have a subset or a superset of work types available to the general holdings.
 	1. Roles can be created that are specific to an administrative context.
 	1. Administrative contexts are represented as facet values in the discovery interface.
