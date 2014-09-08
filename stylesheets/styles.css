@@ -103,7 +103,7 @@ img {
   max-width:100%;
 }
 
-header {
+.page-header {
   width:12em;
   float:left;
   position:fixed;
@@ -159,13 +159,13 @@ footer {
     margin:0;
   }
 
-  header, main, footer {
+  .page-header, main, footer {
     float:none;
     position:static;
     width:auto;
   }
 
-  header {
+  .page-header {
     padding-right:320px;
   }
 
@@ -176,7 +176,7 @@ footer {
     margin:0 0 20px;
   }
 
-  header a small {
+  .page-header a small {
     display:inline;
   }
 }
@@ -187,11 +187,11 @@ footer {
     word-wrap:break-word;
   }
 
-  header {
+  .page-header {
     padding:0;
   }
 
-  header p.view {
+  .page-header p.view {
     position:static;
   }
 
@@ -205,7 +205,7 @@ footer {
     padding:15px;
   }
 
-  header ul {
+  .page-header ul {
     display:none;
   }
 }
@@ -227,7 +227,7 @@ footer {
     color:#444;
   }
 
-  header, footer {
+  .page-header, footer {
     display:none;
   }
 }

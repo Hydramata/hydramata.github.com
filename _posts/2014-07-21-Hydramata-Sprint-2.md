@@ -1,10 +1,8 @@
 ---
-layout: boilerplate
+layout: status
 category: status
 title: Hydramata Sprint 2 Update
 ---
-# Hydramata Sprint 2 Update
-
 Capacity was decreased in sprint two due to vacation and training for several members of the team.
 
 ## CurateND

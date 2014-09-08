@@ -1,10 +1,8 @@
 ---
-layout: boilerplate
+layout: status
 category: status
 title: Hydramata Project Update
 ---
-# Hydramata Project Update
-
 ## Project Changes and Next Steps
 There have been a lot discussions within the Hydramata project recently about how best to optimize our process, team makeup, and technology. These discussions have resulted in a refined [Product Vision][1], [Updated Process][2], [Architectural Changes][3], [Roadmap of Implementation][4], and restructured development team(s). To achieve the first phase of our refined vision and architectural changes, we will be shrinking the implementation team for re-architecting Hydramata over the summer to a small team primarily at Notre Dame. We will then bring in developers from other project partners as necessary and spawn additional development teams once we emerge from the core refactor. More specifics on next steps and other project changes are below.
 

@@ -1,10 +1,8 @@
 ---
-layout: boilerplate
+layout: status
 category: status
 title: Hydramata Sprint 1 Update
 ---
-# Hydramata Sprint 1 Update
-
 ## CurateND
 
 There have been some changes to [CurateND][1] since [it is in beta][2]. CurateND is deployed from the master branch in the [CurateND github repository][3]. As bugs or changes have surfaced the team at Notre Dame will commit them to Curate as long as they makes sense as engine-level functionality. There are some stopgap features, such filtering the Work types that are available to users, that have been kept at the application-level when they serve ND-specific integration needs.

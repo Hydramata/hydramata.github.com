@@ -1,0 +1,14 @@
+---
+layout: boilerplate
+---
+<section itemscope itemtype="http://schema.org/Article">
+  <header>
+    <h1 id="page-title" itemprop="headline">{{ page.title }}</h1>
+    <p>
+      <time datetime="{{ page.date | date:"%Y-%m-%d %H:%M" }}" itemprop="dateCreated">{{ page.date | date:"%B %e, %Y" }}</time>
+    </p>
+  </header>
+  <article itemprop="text">
+    {{ content }}
+  </article>
+</section>
